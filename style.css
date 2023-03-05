@@ -1,3 +1,144 @@
+body {
+  background-color: black;
+}
+
+header {
+  background-color: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  font-size: 3vh;
+  font-family: Helvetica;
+  z-index: 1000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 3vh;
+  background-color: blue;
+}
+
+.header-button {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 3vh;
+  background-color: blue;
+  border: none;
+  padding: 0px 0px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+}
+
+.custom-button {
+  padding: 20vh;
+  border: none;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .custom-button {
+  width: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 4vh;
+}
+
+.custom-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: white;
+  height: 100%;
+  width: 100%;
+}
+
+.button-text {
+  z-index: 1;
+  color: blue;
+}
+
+.custom-button:hover .custom-shape {
+  fill: blue;
+  transition: all 0s ease;
+}
+
+.custom-button:hover .button-text {
+  color: white;
+  transition: all 0s ease;
+}
+
+.content {
+  margin: auto;
+  width: 60%;
+  padding: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 22vh;
+  margin-bottom: 22vh;
+  display: block;
+  /*background: url(https://steamuserimages-a.akamaihd.net/ugc/400086242642081746/F4586E52EC8F72B1C6B3506480D5D992C7D9D61B/) center center;
+  background-size: 90%;*/
+}
+
+.caption {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  color: white;
+  font-family: Helvetica;
+  font-size: 16px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+
+.video-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 60%;
+}
+
+video {
+  width: 60%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
