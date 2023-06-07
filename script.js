@@ -153,19 +153,19 @@ setTimeout(function () {
       setTimeout(function () {
         document.getElementById("gif12").style.display = "none";
         document.getElementById("giftext").style.display = "none";
-        document.getElementById("img1").style.display = "block";
-        document.getElementById("title1").style.display = "block";
+        document.getElementById("img12").style.display = "block";
+        document.getElementById("title12").style.display = "block";
       }, 400);
     });
 
     document.getElementById("img12").addEventListener("click", function () {
-      document.getElementById("gif13").style.display = "block";
+      document.getElementById("gif1").style.display = "block";
       document.getElementById("giftext").style.display = "block";
       document.getElementById("img12").style.display = "none";
       document.getElementById("title12").style.display = "none";
   
       setTimeout(function () {
-        document.getElementById("gif13").style.display = "none";
+        document.getElementById("gif1").style.display = "none";
         document.getElementById("giftext").style.display = "none";
         document.getElementById("img1").style.display = "block";
         document.getElementById("title1").style.display = "block";
