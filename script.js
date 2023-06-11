@@ -153,8 +153,8 @@ setTimeout(function () {
       setTimeout(function () {
         document.getElementById("gif12").style.display = "none";
         document.getElementById("giftext").style.display = "none";
-        document.getElementById("img12").style.display = "block";
-        document.getElementById("title12").style.display = "block";
+        document.getElementById("img1").style.display = "block";
+        document.getElementById("title1").style.display = "block";
       }, 400);
     });
 
