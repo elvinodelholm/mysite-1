@@ -9,6 +9,7 @@ setTimeout(function () {
       document.getElementById("giftext").style.display = "block";
       document.getElementById("img1").style.display = "none";
       document.getElementById("title1").style.display = "none";
+      document.getElementById("click1").style.display= "none";
   
       setTimeout(function () {
         document.getElementById("gif2").style.display = "none";
@@ -179,4 +180,10 @@ setTimeout(function () {
     mailText.innerHTML = "elvin.odelholm@gmail.com";
   }
   
+
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      document.getElementById("click1").style.display = "block";
+    }, 4000);
+  });
 
