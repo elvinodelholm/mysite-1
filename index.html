@@ -9,6 +9,14 @@
         
       }
 
+      body {
+        cursor: default;
+      }
+
+      input, textarea {
+        cursor: auto;
+      }
+
       .stacked {
         position: relative;
         color: black;
@@ -49,12 +57,13 @@
         color: black;
         text-decoration: none;
       }
+      
 
       /* Desktop */
       @media screen and (min-width: 1000px) {
         .header {
-          width: 30vw;
-          font-size: 2.3vh;
+          width: 50vw;
+          font-size: 6vh;
           margin-left: 0.8vw;
         }
 
@@ -82,15 +91,17 @@
         }
 
         #img-bottom {
-          padding-bottom: 22vh;
+          padding-bottom: 2.1vh;
         }
+        
+
       }
 
       /* Mobile */
       @media screen and (max-width: 1000px) {
         .header {
           width: 100vw;
-          font-size: 4.5vw;
+          font-size: 9vw;
           margin-left: 1.3vw;
 
         }
@@ -120,7 +131,12 @@
         #img-bottom {
           padding-bottom: 38vh;
         }
+
       }
+
+    
+
+      
     </style>
    
    
@@ -152,12 +168,9 @@
   
     setInterval(toggleTextVisibility, 500);
   
-    function changeText() {
-      const mailText = document.getElementById("mail-text");
-      mailText.innerHTML =
-        mailText.innerHTML === "elvin.odelholm@gmail.com"
-          ? "Mail"
-          : "elvin.odelholm@gmail.com";
+    function toggleText(elementId, originalText, explanationText) {
+      const infoText = document.getElementById(elementId);
+      infoText.innerHTML = infoText.innerHTML === originalText ? explanationText : originalText;
     }
   
     window.addEventListener("DOMContentLoaded", () => {
@@ -183,39 +196,74 @@
   <body>
     <header class="header">
       <p>
-        Hello there, I'm Elvin Odelholm.
-        <br />
-        I'm a student at Beckmans College of Design.
-        <br />
+      
       </p>
       <div class="stacked">
         <p>
-          <span>Here is my animation of Kjartan Slettemark.</span>
-          <span>Here is my digital poster for Orionteatern.</span>
-          <span>Here is a horse I rented out as ad space.</span>
-          <span>Here is a candy bag we made.</span>
-          <span>Here is a metro sign we made that didn't work out.</span>
-          <span>Here is artwork we made for a free spirited festival.</span>
-          <span>Here is when I bought a bunch of egg timers.</span>
-          <span>Here is the timer I made, It's for workaholics.</span>
-          <span>Here is my portrait of Elis Burrau.</span>
-          <span>Here is my portrait of Christoffer Nyqvist.</span>
-          <span>Here is my animation of a Kjartan Slettemark.</span>
+          <span>Heyyyy and Welcome<br>to my portfololio!</span>
+
+          <span id="text-1" onclick="toggleText('text-1',
+          'Here is:<br><i>Watch My Nonsense</i><br>I wanted a space where I could show my non-comprehensible creations without getting asked to explain. So I made a TV channel devoted to nonsense.',
+          'Here is:<br><i>Watch My Nonsense</i><br>ⓘ')">
+          Here is:<br><i>Watch My Nonsense</i><br>ⓘ</span>
+         
+         <span id="text-2" onclick="toggleText('text-2',
+          'Here is:<br><i>Ad Space For Rent</i><br>I just think that every visible surface has at least some ad money potential.',
+          'Here is:<br><i>Ad Space For Rent</i><br>ⓘ')">
+          Here is:<br><i>Ad Space For Rent</i><br>ⓘ</span>
+
+          <span id="text-3" onclick="toggleText('text-3',
+          'Here is:<br><i>Reel Feelings</i><br>When working on designing waiting rooms for maternity centers, I experimented with combining emotional humans with unemotional science.',
+          'Here is:<br><i>Reel Feelings</i><br>ⓘ')">
+          Here is:<br><i>Reel Feelings</i><br>ⓘ</span>
+
+          <span id="text-4" onclick="toggleText('text-4',
+          'Here is:<br><i>Me Touching Grass</i><br>We got the job to produce art for a free spirited outdoor festival. We tried to add a bit of indoor energy.',
+          'Here is:<br><i>Me Touching Grass</i><br>ⓘ')">
+          Here is:<br><i>Me Touching Grass</i><br>ⓘ</span>
+
+          <span id="text-5" onclick="toggleText('text-5',
+          'Here is:<br><i>Succession Story</i><br>97% of Swedens CEO-positions gets inherited from parent to child. We wanted to raise this fact in an exhibition taking place in probably the area densest with family owned corporations, Värnamo. Invited was the owners of the local industry, and their children.',
+          'Here is:<br><i>Succession Story</i><br>ⓘ')">
+          Here is:<br><i>Succession Story</i><br>ⓘ</span>
+
+          <span id="text-6" onclick="toggleText('text-6',
+          'Here is:<br><i>Sugar Struck by Insight</i><br>What happens when something easy and joyful suddenly gets dark and existential? We wanted to find out.',
+          'Here is:<br><i>Sugar Struck by Insight</i><br>ⓘ')">
+          Here is:<br><i>Sugar Struck by Insight</i><br>ⓘ</span>
+
+          <span id="text-7" onclick="toggleText('text-7',
+          'Here is:<br><i>Attempts to Reframe</i><br>Reframing is a powerful tool in the marketing business. But I wanted to use it in the private world.',
+          'Here is:<br><i>Attempts to Reframe</i><br>ⓘ')">
+          Here is:<br><i>Attempts to Reframe</i><br>ⓘ</span>
+
+          <span id="text-8" onclick="toggleText('text-8',
+          'Here is:<br><i>The Prophet</i><br>I made a portrait of the poet Elis Monteverde Burrau holding The Veil of Jesus, but with his own face instead of Christ’s. It’s an hommage to my favourite prophet.',
+          'Here is:<br><i>The Prophet</i><br>ⓘ',)">
+          Here is:<br><i>The Prophet</i><br>ⓘ</span>
+
+          <span id="text-9" onclick="toggleText('text-9',
+          'Here is:<br><i>Artist Selling Yoghurt</i><br>I wanted to combine gloomy serious art with innocent cheerful advertising. The result is a strange yoghurt commercial featuring a tormented performance artist.',
+          'Here is:<br><i>Artist Selling Yoghurt</i><br>ⓘ')">
+          Here is:<br><i>Artist Selling Yoghurt</i><br>ⓘ</span>
+
+
+          <span>Heyyyy and Welcome<br>to my portfololio!</span>
         </p>
       </div>
     </header>
     <div class="img-container">
-      <img src="assets/kjartan slettemark elvin odelholm.gif" class="img-wide" id="img-1" />
-      <img src="assets/orionteatern elvin odelholm.gif" class="img-tall" />
+      <img src="assets/hello elvin odelholm.gif" class="img-wide" id="img-1" />
+      <img src="assets/TV elvin odelholm.gif" class="img-wide" id="img-1" />
       <img src="assets/ad horse elvin odelholm.jpg" class="img-wide" />
-      <img src="assets/non stop elvin odelholm.jpg" class="img-tall" />
-      <img src="assets/kymlinge forest elvin odelholm.jpg" class="img-tall" />
+      <img src="assets/model 3.jpg" class="img-tall" />
       <img src="assets/desktop elvin odelholm.jpg" class="img-tall" />
-      <img src="assets/eggs elvin odelholm.jpg" class="img-wide" />
-      <img src="assets/resume elvin odelholm.jpg" class="img-tall" />
+      <img src="assets/succession elvin odelholm.jpg" class="img-wide" />
+      <img src="assets/non stop elvin odelholm.jpg" class="img-tall" />
+      <img src="assets/power nap 2 elvin odelholm.jpg" class="img-tall" />
       <img src="assets/elis burrau elvin odelholm.jpg" class="img-wide" />
-      <img src="assets/Christoffer Nyqvist elvin odelholm.jpg" class="img-tall" />
-      <img src="assets/kjartan slettemark elvin odelholm.gif" class="img-wide" id="img-bottom" />
+      <img src="assets/Yoghurt elvin odelholm.gif" class="img-wide" />
+      <img src="assets/hello elvin odelholm.gif elvin odelholm.gif" class="img-wide" id="img-bottom" />
     </div>
 
     <footer class="footer">
