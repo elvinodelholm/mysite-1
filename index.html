@@ -172,6 +172,14 @@
       const infoText = document.getElementById(elementId);
       infoText.innerHTML = infoText.innerHTML === originalText ? explanationText : originalText;
     }
+
+    function changeText() {
+      const mailText = document.getElementById("mail-text");
+      mailText.innerHTML =
+        mailText.innerHTML === "elvin.odelholm@gmail.com"
+          ? "Mail"
+          : "elvin.odelholm@gmail.com";
+    }
   
     window.addEventListener("DOMContentLoaded", () => {
       toggleTextVisibility();
@@ -277,4 +285,5 @@
     </footer>
   </body>
 </html>
+
 
