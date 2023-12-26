@@ -3,6 +3,45 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: black;
+  font-size: 2.4vh;
+}
+header {
+  position: fixed;
+}
+
+#about {
+  position: absolute;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+
+.top-left {
+  position: fixed;
+  top: 1vw;
+  left: 1vw;
+  z-index: 1007;
+}
+
+.top-right {
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  z-index: 1007;
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 1vw;
+  left: 1vw;
+  z-index: 1005;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  z-index: 1006;
 }
 
 #animatedBackground {
@@ -15,27 +54,258 @@ body {
   background-repeat: repeat;
   background-position: 0 0;
   background-size: auto 100%;
-/*adjust s value for speed*/
+  /*adjust s value for speed*/
   animation: animatedBackground 120s linear infinite;
+  z-index: -1000;
 }
 
 @keyframes animatedBackground {
   from {
     background-position: 0 0;
   }
-/*use negative width if you want it to flow right to left else and positive for left to right*/
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
   to {
     background-position: -10000px 0;
   }
 }
 
-/*--- boat ---*/
-#boat {
+.knob {
+  position: absolute;
+  width: 3.2vw;
+  height: auto;
+  top: 0vw;
+  left: 0.04vw;
+  display: flex;
+  z-index: 900;
+}
+.pole {
+  position: absolute;
+  width: 2.7vw;
+  top: 2.5vw;
+  left: 0.14vw;
+  display: flex;
+}
+
+#boat-img {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  left: 0vw;
+  display: flex;
+  z-index: 1000;
+}
+
+#boat-gif {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  top: 145vw;
+  left: 0vw;
+  display: flex;
+  z-index: -999;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .stacked span {
+    position: fixed;
+    top: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    text-align: center;
+    align-content: center;
+    width: 30vw;
+    font-size: 3vh;
+    z-index: 500;
+  }
+
+  .sleeve {
     position: absolute;
-    width: 100vw; 
-    height: auto; 
-    top: 145vw; 
-    left: 0vw; 
+    width: 0.4vw;
+    height: 50.4vw;
+    top: 3.6vw;
+    left: 0vw;
     display: flex;
-    z-index: 120000;
+  }
+  .image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 30vw;
+    display: flex;
+    z-index: 1000;
+  }
+
+  .index-sleeve {
+    position: absolute;
+    width: 0.4vw;
+    height: 50.4vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .index-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 30vw;
+    display: flex;
+    z-index: 1000;
+  }
+
+  .small-sleeve {
+    position: absolute;
+    width: 0.4vw;
+    height: 10.2vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .small-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 10vw;
+    display: flex;
+    z-index: 1000;
+  }
+  .about-text {
+    position: fixed;
+    top: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    align-content: center;
+    width: 30vw;
+    font-size: 3vh;
+    z-index: 1009;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 999px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .stacked span {
+    position: fixed;
+    top: 40vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    text-align: center;
+    align-content: center;
+    width: 83vw;
+    font-size: 3.6vh;
+    z-index: 0;
+  }
+
+  .sleeve {
+    position: absolute;
+    width: 0.4vw;
+    height: 57.7vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 57vw;
+    display: flex;
+    z-index: 900;
+  }
+
+  .index-sleeve {
+    position: absolute;
+    width: 0.4vw;
+    height: 30.4vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .index-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 30vw;
+    display: flex;
+    z-index: 900;
+  }
+
+  .small-sleeve {
+    position: absolute;
+    width: 0.4vw;
+    height: 30.4vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .small-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 30vw;
+    display: flex;
+    z-index: 900;
+  }
+  .about-text {
+    position: fixed;
+    top: 40vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    align-content: center;
+    width: 83vw;
+    font-size: 3.6vh;
+    z-index: 1009;
+  }
+}
+
+.trigger {
+  width: 10vw;
+  height: 10vw;
+  left: 45vw;
+  z-index: 100000;
+  position: absolute;
 }
