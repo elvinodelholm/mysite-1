@@ -1,339 +1,89 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Elvin Odelholm</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flagship</title>
+    <link rel="icon" type="image/x-icon" href="boat-assets/icon.png" />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      .header {
-        position: fixed;
-        
-      }
-
-      .stacked {
-        position: relative;
-        color: black;
-        font-family: "Times New Roman", Times, serif;
-        margin-top: -1em;
-      }
-
-      .stacked span {
+      .flagpole-1 {
         position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-      }
-
-      .img-container {
+        top: 5vw;
+        left: 70vw;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+      }
+      .flagpole-1 .pole {
+        height: 180vw;
       }
 
-      .img {
+      .flagpole-2 {
+        position: absolute;
+        top: 50vw;
+        left: 88vw;
+        display: flex;
       }
-      .img-tall {
+      .flagpole-2 .pole {
+        height: 140vw;
       }
-      .img-wide {
+      .flagpole-3 {
+        position: absolute;
+        top: 96vw;
+        left: 55vw;
+        display: flex;
       }
-
-      .footer {
-        position: fixed;
-        bottom: 0;
-        text-align: left;
-        font-family: "Times New Roman", Times, serif;
-        line-height: 1.5em;
-      }
-
-      a {
-        color: black;
-        text-decoration: none;
-      }
-
-      /* Desktop */
-      @media screen and (min-width: 1000px) {
-        .header {
-          width: 50vw;
-          font-size: 7vh;
-          margin-left: 1.5vw;
-          margin-top: 1vw;
-          stroke: white;
-         stroke-width: 5px;
-         stroke-linejoin: round;
-        }
-
-        .footer {
-          font-size: 2.3vh;
-          margin-left: 0.8vw;
-        }
-
-        #img-1 {
-          margin-top: 13vh;
-        }
-
-        .img-tall {
-          width: 30vw;
-          margin: 20vh;
-          margin-left: auto;
-          margin-right: 10vw;
-        }
-
-        .img-wide {
-          width: 52vw;
-          margin: 20vh;
-          margin-left: auto;
-          margin-right: 10vw;
-        }
-
-        .img-vimeo {
-          width: 52vw;
-          height: 40vw;
-          margin: 20vh;
-          margin-left: auto;
-          margin-right: 10vw;
-          border: none;
-          z-index: 10000;
-        }
-
-        #img-bottom {
-          padding-bottom: 22vh;
-        }
-
-        
-      
-
+      .flagpole-3 .pole {
+        height: 74vw;
       }
 
-      /* Mobile */
-      @media screen and (max-width: 1000px) {
-        .header {
-          width: 95vw;
-          font-size: 6.5vw;
-          margin-left: 1.3vw;
-
-        }
-
-        .footer {
-          font-size: 4.5vw;
-          margin-left: 1.3vw;
-
-        }
-
-        .img-tall {
-          width: 95vw;
-          margin-top: 35vw;
-          padding-bottom: 35vw;
-        }
-
-        .img-wide {
-          width: 95vw;
-          margin-top: 35vw;
-          padding-bottom: 35vw;
-        }
-
-        .img-vimeo {
-          width: 95vw;
-          height: 80vw;
-          margin-top: 35vw;
-          padding-bottom: 35vw;
-          border: none;
-          z-index: 10000;
-
-        }
-
-        #img-1 {
-          margin-top: 28vh;
-        }
-
-        #img-bottom {
-          padding-bottom: 38vh;
-        }
+      #boat-img {
+        top: 145vw;
+      }
+      #boat-gif {
+        top: 145vw;
       }
     </style>
-   
-   
-   <script>
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-  
-    function toggleTextVisibility() {
-      const imgElements = document.querySelectorAll(".img-wide, .img-tall, .img-vimeo");
-      const textElements = document.querySelectorAll(".stacked span");
-  
-      imgElements.forEach((img, index) => {
-        if (isInViewport(img)) {
-          textElements.forEach((text) => {
-            text.style.display = "none";
-          });
-          textElements[index].style.display = "block";
-        }
-      });
-    }
-  
-    setInterval(toggleTextVisibility, 500);
-  
-    function changeText() {
-      const aboutText = document.getElementById("about-text");
-      aboutText.innerHTML =
-        aboutText.innerHTML === "elvin.odelholm@gmail.com"
-          ? "about"
-          : "elvin.odelholm@gmail.com";
-    }
-  
-    window.addEventListener("DOMContentLoaded", () => {
-      toggleTextVisibility();
-  
-      window.addEventListener("scroll", toggleTextVisibility);
-      window.addEventListener("resize", toggleTextVisibility);
-      window.addEventListener("orientationchange", toggleTextVisibility);
-      window.addEventListener("touchmove", toggleTextVisibility);
-    });
-  
-    window.addEventListener("scroll", () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        window.scrollTo(0, 0);
-      }
-    });
-  </script>
-  
-  
-
-
   </head>
   <body>
-    <header class="header">
-      <div class="stacked">
-        <p>
-          <span>
-           Wälkommen till<br>
-            min portfololio!<br>
-          </span>
-
-          <span>
-            Jag har ägnat rätt mycket tid åt att koka ihop saker de senaste åren, foto, film, 3D e.t.c!<br>
-            <br>
-            Nu ska jag kort visa 2 projekt.
-          </span>
-
-          <span>
-            Projekt 1.<br>
-            <i>Vill du bli min annonsplats?</i><br>
-            <br>
-            Foto,<br>arbetsprov till Beckmans.
-          </span>
-
-          <span>
-            Det är kul med Attention Economy.<br>
-            <br>
-            Att det finns pengar i att bara kolla.
-            Isåfall finns det ju potentiella pengar i alla ytor som går att kolla på. Alltså exempelvis: en kaffekopp, en penna, en avklippt nagel, en nysning?
-            De dolda annonsytorna är oändliga. 
-          </span>
-
-          <span>
-            Jag ska måla hela världen lilla mamma. Men jag ska börja med något litet som jag har haft ögonen på länge: häst.<br>
-            <br>
-            Efter lite övertalan fick jag tillgång till en bekant bondes häst. För att vara exakt: den isländska ponnyn Doud.
-          </span>
-
-          <span>
-            Att teckna mitt budskap på hennes kropp var inte det minst svåra som jag någonsin gjort. Både jag och Doud var lite nervösa. Men lagom till skymning hade vi båda lugnat ned oss och jag fick till sist min bild.
-          </span>
-
-
-          <span>
-            Projekt 2.<br>
-            <i>Parasitära Mutationstankar</i><br>
-            <br>
-            Film 1 min,<br>projekt på Beckmans.
-          </span>
-
-          <span>
-            Jag har en grej för konst som är så seriös och högstämd och kryptisk att det blir parodiskt. Jag tycker det är vackert.<br> 
-          <br>
-          Samtidigt har jag viss förståelse för dem som vill strypa statliga bidrag till den typen av saker, de som tycker att all konst ska finansiera sig själv.
-        </span>
-
-          <span>
-            Jag ville blanda ihop de där två olika känslorna. En ohelig mutation utav de båda var det jag tänkte mig.<br>
-          <br>
-            Med hjälp av jättemycket cellplast och jätteliten morakniv byggde jag upp mina kulisser i en möteslokal i skolan. Projektet var: på G.
-          </span>
-
-          <span>
-            En vänlig klasskamrat gick med på att utföra mitt oerhört krävande performance-konstverk. <br>
-            <br>
-            Det var en one-take-situation eftersom att han enligt manus skulle riva kulisserna, och duscha i yoghurt.
-          </span>
-
-          <span>
-          Jag klippte in scenen i ett reklam-showroom vid Stureplan<br>(after effects)
-          <br>
-          <br>
-            Resultatet är ett högstämt performance som också<br> är reklam för en<br> probiotisk yoghurt.<br>
-          <br>
-            Kryptisk kommersiell<br> mutation: check ☑
-          </span>
-
-          <span>
-            Det finns massor av saker<br> som jag vill prata om, hoppas vi<br>får chans att göra det!
-
-          </span>
-          
-          <span>
-            Wälkommen till<br>
-            min portfololio!<br>
-           <br>
-           Jag ska visa 2 projekt.
-          </span>
-
-
-        </p>
-      </div>
-    </header>
-    <div class="img-container">
-      <img src="assets/Me elvin odelholm.gif" class="img-wide" id="img-1" />
-      <img src="assets/tease 4.gif" class="img-wide" />
-      <img src="assets/horse/horse body.JPG" class="img-wide" />
-      <img src="assets/horse/reklam.jpg" class="img-wide" />
-      <img src="assets/horse/painting.jpg" class="img-wide" />
-      <img src="assets/horse/ad horse.jpg" class="img-wide" />
-      <img src="assets/yoghurt/ice.jpg" class="img-wide" />
-      <img src="assets/yoghurt/performance2.jpg" class="img-wide" />
-      <img src="assets/yoghurt/room.jpg" class="img-wide" />
-      <img src="assets/yoghurt/drip.gif" class="img-wide" />
-
-      <iframe class="img-vimeo"
-      src="https://player.vimeo.com/video/891391733?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture" title="ClimberDog.TV"></iframe>
-
-      <img src="assets/tease 4.gif" class="img-wide" />
-
-      <img src="assets/Me elvin odelholm.gif" class="img-wide" id="img-bottom" />
+    <div class="fixed">
+      <a href="index.html" class="top-left">Projects</a>
+      <a href="about.html" class="top-right">About</a>
     </div>
 
-    <footer class="footer">
-      <p>
-        <a href="about.html" target="_blank"
-          >About</a
-        >
-        <br />
-        <a href="https://www.instagram.com/elvinodelholm/" target="_blank"
-          >Instagram</a
-        >
-        <br>
-        
+    <div id="animatedBackground"></div>
 
-      </p>
-    </footer>
+    <div class="flagpole-1">
+      <img class="knob" src="boat-assets/knob.png" alt="knob" />
+      <img class="pole" src="boat-assets/pole.png" alt="pole" />
+      <img class="index-sleeve" src="boat-assets/sleeve.png" alt="sleeve" />
+      <a href="project-1.html" target="_blank">
+        <img
+          class="index-image"
+          src="proxy-assets/bird-black.png"
+          alt="image"
+        />
+      </a>
+    </div>
+
+    <div class="flagpole-2">
+      <img class="knob" src="boat-assets/knob.png" alt="knob" />
+      <img class="pole" src="boat-assets/pole.png" alt="pole" />
+      <img class="index-sleeve" src="boat-assets/sleeve.png" alt="sleeve" />
+      <a href="project-2.html" target="_blank">
+        <img class="index-image" src="proxy-assets/dog-black.png" alt="image" />
+      </a>
+    </div>
+
+    <div class="flagpole-3">
+      <img class="knob" src="boat-assets/knob.png" alt="knob" />
+      <img class="pole" src="boat-assets/pole.png" alt="pole" />
+      <img class="index-sleeve" src="boat-assets/sleeve.png" alt="sleeve" />
+      <a href="project-3.html" target="_blank">
+        <img class="index-image" src="proxy-assets/fish-blue.png" alt="image" />
+      </a>
+    </div>
+
+    <img src="boat-assets/boat.png" id="boat-img" />
+    <img src="boat-assets/boat-hd.gif" id="boat-gif" />
   </body>
 </html>
