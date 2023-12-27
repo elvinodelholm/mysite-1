@@ -47,3 +47,13 @@ const formattedDate = `${today.getFullYear().toString().slice(-2)}.${
 // Display the formatted date
 const dateDisplay = document.getElementById("dateDisplay");
 dateDisplay.innerText = formattedDate;
+
+
+function changeText() {
+  const mailText = document.getElementById("mail-text");
+  mailText.innerHTML =
+    mailText.innerHTML === "elvin.odelholm@gmail.com"
+      ? "Mail"
+      : "elvin.odelholm@gmail.com";
+}
+
