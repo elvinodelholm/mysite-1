@@ -6,16 +6,34 @@
     <title>Flagship</title>
     <link rel="icon" type="image/x-icon" href="boat-assets/icon.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
     <style>
-      .flagpole-1 {
+      /* Desktop */
+      @media only screen and (min-width: 1000px) {
+        .flagpole-1 {
         position: absolute;
-        top: 34vw;
+        top: 30vw;
+        left: 88vw;
+        display: flex;
+      }
+      .flagpole-1 .pole {
+        height: 160vw;
+      }
+      }
+      /* Mobile */
+      @media only screen and (max-width: 999px) {
+        .flagpole-1 {
+        position: absolute;
+        top: 10vw;
         left: 56.3vw;
         display: flex;
       }
       .flagpole-1 .pole {
-        height: 137vw;
+        height: 160vw;
       }
+      }
+    
       #boat-img {
         top: 145vw;
       }
@@ -26,16 +44,17 @@
   </head>
   <body>
     <div class="fixed">
-      <a href="index.html" class="top-left">Projects</a>
-      <a href="about.html" class="top-right">About</a>
+      <a target="_self" href="index.html" class="top-left">Projects</a>
+      <a target="_self" href="about.html" class="top-right">About</a>
     </div>
 
     <div class="about-text">
       <p>
         Så bra som inlåsta dansar och skuggvärlden med narrativet i absurda
         dimentioner. Trådar labyrintiska, av och hallucinatoriska, förvridna den
-        sträcker sanningar verkligheter. Koreografi och mytomanens den sublima
-        vilt paradoxala av med av den.
+        sträcker sanningar verkligheter.<br><br>
+        <span id="mail-text" onclick="changeText()">Mail</span>
+        / <a target="_blank" href="https://www.instagram.com/elvinodelholm/">Instagram</a> 
       </p>
     </div>
 
@@ -45,7 +64,7 @@
       <img class="knob" src="boat-assets/knob.png" alt="knob" />
       <img class="pole" src="boat-assets/pole.png" alt="pole" />
       <img class="small-sleeve" src="boat-assets/sleeve.png" alt="sleeve" />
-      <a href="project-1.html" target="_blank">
+      <a target="_self" href="index.html" target="_blank">
         <img class="small-image" src="proxy-assets/portait.png" alt="image" />
       </a>
     </div>
