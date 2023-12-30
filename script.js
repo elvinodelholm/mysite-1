@@ -11,7 +11,7 @@ function isInViewport(element) {
 
 function toggleTextVisibility() {
   const imgElements = document.querySelectorAll(
-    ".image, .index-image, .trigger"
+    ".image, .index-image, .trigger, .index-image-tall, .vimeo-image"
   );
   const textElements = document.querySelectorAll(".stacked span");
 

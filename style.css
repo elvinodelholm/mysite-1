@@ -238,6 +238,17 @@ a:active {
     display: flex;
     z-index: 1000;
   }
+
+  .vimeo-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: 53vw;
+    height: 30vw;
+    display: flex;
+    z-index: 1000;
+    border: none;
+  }
   
   .bottom-left {
     position: fixed;
@@ -275,17 +286,7 @@ a:active {
     font-size: 8vw;
     z-index: 0;
   }
-  .about-text {
-    position: fixed;
-    top: 40vw;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    align-content: center;
-    width: 83vw;
-    font-size: 8vw;
-    z-index: 1009;
-  }
+  
   .fixed {
     font-size: 8vw;
   }
@@ -374,7 +375,16 @@ a:active {
     display: flex;
     z-index: 900;
   }
-
+  .vimeo-image {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: 53vw;
+    height: 30vw;
+    display: flex;
+    z-index: 1000;
+    border: none;
+  }
   .bottom-left {
     position: fixed;
     bottom: 6vw;
