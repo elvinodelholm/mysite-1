@@ -169,7 +169,23 @@ a:active {
     display: flex;
     z-index: 1000;
   }
-
+  .sleeve-tall {
+    position: absolute;
+    width: 0.4vw;
+    height: 37.47vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .image-tall {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 37vw;
+    display: flex;
+    z-index: 1000;
+  }
   .index-sleeve {
     position: absolute;
     width: 0.4vw;
@@ -293,7 +309,7 @@ a:active {
   .sleeve {
     position: absolute;
     width: 0.4vw;
-    height: 57.7vw;
+    height: 65.8vw;
     top: 3.6vw;
     left: 0vw;
     display: flex;
@@ -303,9 +319,26 @@ a:active {
     top: 3.6vw;
     right: 0vw;
     width: auto;
-    height: 57vw;
+    height: 65vw;
     display: flex;
     z-index: 900;
+  }
+  .sleeve-tall {
+    position: absolute;
+    width: 0.4vw;
+    height: 121.5vw;
+    top: 3.6vw;
+    left: 0vw;
+    display: flex;
+  }
+  .image-tall {
+    position: absolute;
+    top: 3.6vw;
+    right: 0vw;
+    width: auto;
+    height: 120vw;
+    display: flex;
+    z-index: 1000;
   }
   .index-sleeve {
     position: absolute;
