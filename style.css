@@ -309,7 +309,7 @@ a:active {
   .sleeve {
     position: absolute;
     width: 0.4vw;
-    height: 65.8vw;
+    height: 60.7vw;
     top: 3.6vw;
     left: 0vw;
     display: flex;
@@ -319,7 +319,7 @@ a:active {
     top: 3.6vw;
     right: 0vw;
     width: auto;
-    height: 65vw;
+    height: 60vw;
     display: flex;
     z-index: 900;
   }
