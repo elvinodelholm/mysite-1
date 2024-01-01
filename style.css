@@ -172,7 +172,7 @@ a:active {
   .sleeve-tall {
     position: absolute;
     width: 0.4vw;
-    height: 37.47vw;
+    height: 30.4vw;
     top: 3.6vw;
     left: 0vw;
     display: flex;
@@ -182,7 +182,7 @@ a:active {
     top: 3.6vw;
     right: 0vw;
     width: auto;
-    height: 37vw;
+    height: 30vw;
     display: flex;
     z-index: 1000;
   }
@@ -326,7 +326,7 @@ a:active {
   .sleeve-tall {
     position: absolute;
     width: 0.4vw;
-    height: 121.5vw;
+    height: 116.5vw;
     top: 3.6vw;
     left: 0vw;
     display: flex;
@@ -336,7 +336,7 @@ a:active {
     top: 3.6vw;
     right: 0vw;
     width: auto;
-    height: 120vw;
+    height: 115vw;
     display: flex;
     z-index: 1000;
   }
@@ -412,8 +412,8 @@ a:active {
     position: absolute;
     top: 3.6vw;
     right: 0vw;
-    width: 53vw;
-    height: 30vw;
+    width: 86vw;
+    height: 49vw;
     display: flex;
     z-index: 1000;
     border: none;
