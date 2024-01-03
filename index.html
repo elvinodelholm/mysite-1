@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="boat-assets/icon.png" />
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* Desktop */
+      @media only screen and (min-width: 1000px) {
       .flagpole-1 {
         position: absolute;
         top: 5vw;
@@ -53,14 +55,70 @@
       .flagpole-5 .pole {
         height: 120vw;
       }
-      
-
+    
       #boat-img {
         top: 200vw;
       }
       #boat-gif {
         top: 200vw;
       }
+    }
+    /* Mobile */
+    @media only screen and (max-width: 999px) {
+      .flagpole-1 {
+        position: absolute;
+        top: 15vw;
+        left: 72vw;
+        display: flex;
+      }
+      .flagpole-1 .pole {
+        height: 230vw;
+      }
+
+      .flagpole-2 {
+        position: absolute;
+        top: 56vw;
+        left: 34vw;
+        display: flex;
+      }
+      .flagpole-2 .pole {
+        height: 178vw;
+      }
+      .flagpole-3 {
+        position: absolute;
+        top: 74vw;
+        left: 89vw;
+        display: flex;
+      }
+      .flagpole-3 .pole {
+        height: 171vw;
+      }
+      .flagpole-4 {
+        position: absolute;
+        top: 119vw;
+        left: 49vw;
+        display: flex;
+      }
+      .flagpole-4 .pole {
+        height: 135vw;
+      }
+      .flagpole-5 {
+        position: absolute;
+        top: 136vw;
+        left: 78vw;
+        display: flex;
+      }
+      .flagpole-5 .pole {
+        height: 110vw;
+      }
+    
+      #boat-img {
+        top: 200vw;
+      }
+      #boat-gif {
+        top: 200vw;
+      }
+    }
 
 
       
