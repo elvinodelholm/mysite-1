@@ -7,7 +7,13 @@ body {
 }
 header {
   position: fixed;
+
 }
+
+.stacked {
+  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+}
+
 
 #about {
   position: absolute;
@@ -104,16 +110,22 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: white;
+  color: black;
+  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+
 }
 
 /* selected link */
 a:active {
-  color: white;
+  color: black;
+  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+
 }
 
 #mail-text:hover {
-  color: white; 
+  color: black; 
+  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+
 }
 
 /* Desktop */
@@ -135,6 +147,7 @@ a:active {
     width: 40vw;
     font-size: 4vw;
     z-index: 500;
+    
   }
   .about-text {
     position: fixed;
@@ -144,12 +157,14 @@ a:active {
     text-align: center;
     align-content: center;
     width: 50vw;
-    font-size: 4vw;
+    font-size: 3.5vw;
     z-index: 1009;
+    text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
   } 
 
   .fixed {
   font-size: 4vw;
+  
   }
 
   .sleeve {
@@ -301,6 +316,11 @@ a:active {
     width: 83vw;
     font-size: 8vw;
     z-index: 0;
+  }
+
+  .about-text {
+    text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+
   }
   
   .fixed {
