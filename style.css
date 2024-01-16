@@ -100,12 +100,16 @@ header {
 a:link {
   color: black;
   text-decoration: none;
+  transition: text-shadow 0.5s ease; 
+
 }
 
 /* visited link */
 a:visited {
   color: black;
   text-decoration: none;
+  transition: text-shadow 0.5s ease; 
+
 }
 
 /* mouse over link */
@@ -127,6 +131,15 @@ a:active {
   text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
 
 }
+
+.index-image, .index-image-tall, .index-image-mini {
+  transition: box-shadow 0.5s ease; 
+
+}
+.index-image:hover, .index-image-tall:hover, .index-image-mini:hover{
+  box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 300px #fff, 0 0 300px #fff;
+}
+
 
 /* Desktop */
 @media only screen and (min-width: 1000px) {
