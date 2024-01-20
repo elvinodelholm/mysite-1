@@ -293,6 +293,7 @@ a:active {
     z-index: 1000;
     border: none;
   }
+
   
   .bottom-left {
     position: fixed;
@@ -359,7 +360,7 @@ a:active {
   .sleeve-tall {
     position: absolute;
     width: 0.4vw;
-    height: 116.5vw;
+    height: 110.5vw;
     top: 3.6vw;
     left: 0vw;
     display: flex;
@@ -369,7 +370,7 @@ a:active {
     top: 3.6vw;
     right: 0vw;
     width: auto;
-    height: 115vw;
+    height: 110vw;
     display: flex;
     z-index: 1000;
   }

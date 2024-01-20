@@ -20,7 +20,7 @@
         display: flex;
       }
       .flagpole-1 .pole {
-        height: 170vw;
+        height: 205vw;
       }
 
       .about-text {
@@ -31,25 +31,44 @@
         text-align: left;
         align-content: center;
         width: 70vw;
-        font-size: 4vh;
+        font-size: 7vh;
         z-index: 1009;
-  } 
+      } 
+
+      .portrait-sleeve {
+        position: absolute;
+        width: 0.4vw;
+        height: 18.2vw;
+        top: 3.6vw;
+        left: 0vw;
+        display: flex;
+      }
+      .portrait-img {
+        position: absolute;
+        top: 3.6vw;
+        right: 0vw;
+        width: auto;
+        height: 18vw;
+        display: flex;
+        z-index: 1000;
+      }
+      
       }
       /* Mobile */
       @media only screen and (max-width: 999px) {
         .flagpole-1 {
         position: absolute;
-        top: 10vw;
+        top: 20vw;
         left: 56.3vw;
         display: flex;
       }
       .flagpole-1 .pole {
-        height: 196.5vw;
+        height: 186.5vw;
       }
 
       .about-text {
         position: fixed;
-        top: 40vw;
+        top: 40vh;
         left: 50%;
         transform: translateX(-50%);
         text-align: left;
@@ -57,7 +76,25 @@
         width: 83vw;
         font-size: 2.5vh;
         z-index: 1009;
-  }
+      }
+
+      .portrait-sleeve {
+        position: absolute;
+        width: 0.4vw;
+        height: 50.5vw;
+        top: 3.6vw;
+        left: 0vw;
+        display: flex;
+      }
+      .portrait-img {
+        position: absolute;
+        top: 3.6vw;
+        right: 0vw;
+        width: auto;
+        height: 50vw;
+        display: flex;
+        z-index: 1000;
+      }
       }
     
       #boat-img {
@@ -76,12 +113,10 @@
 
     <div class="about-text">
       <p>
-        Elvin Odelholm.<br>Born in 2002, residing in Stockholm.<br>
-        <br>
-        Currently pursuing a BFA in Visual Communication at Beckmans College of Design. Intrigued by culture and art history as well as by working conceptually with still and moving images. <br>
-        <br>
-        Proficient in After Effects, Stable Diffusion, Photoshop, InDesign, Premiere Pro, and Blender. Alongside personal and student projects, I have a versatile background in professional work, including the design of over 50 published book covers. <br>
-        <br>
+        
+      That's me on the flag right there. Or actually it's my drivers license. So what, I'm a licensed driver. I'm also a student at Beckmans College of Design. That's where I'm taking a BFA in Visual Communication. <br><br>
+
+
         <span id="mail-text" onclick="changeText()">Mail</span>
         / <a target="_blank" href="https://www.instagram.com/elvinodelholm/">Instagram</a> 
       </p>
@@ -92,9 +127,9 @@
     <div class="flagpole-1">
       <img class="knob" src="boat-assets/knob.png" alt="knob" />
       <img class="pole" src="boat-assets/pole.png" alt="pole" />
-      <img class="index-sleeve-mini" src="boat-assets/sleeve.png" alt="sleeve" />
+      <img class="portrait-sleeve" src="boat-assets/sleeve.png" alt="sleeve" />
       <a target="_self" href="index.html" target="_blank">
-        <img class="index-image-mini" src="assets/elvin odelholm.jpg" alt="image" />
+        <img class="portrait-img" src="assets/elvin odelholm.jpg" alt="image" />
       </a>
     </div>
 
