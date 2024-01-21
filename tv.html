@@ -1,141 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Metaverse.TV</title>
-	<style>
-		body 
-    
-    
-    {
-			margin: 0;
-			padding: 0;
-		}
-		
-		video {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			z-index: -1;
-		}
-		
-		#video-overlay {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.8);
-			z-index: 1;
-		}
-		
-		#video-overlay video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-    
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Image and Video</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
 
+        #fullscreen-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
 
-    #webring {
-    display: flex;
-    text-align: center;
-    font-size: 0.8vw;
-    color: #767c5c;
-      
-    line-height: 1em;
-    font-family: "pixel", arial;
-    padding: 0.5vw;
-    
+        #fullscreen-element {
+            width: 100vw;
+			height: auto;
+        }
 
-    }
-
-    #webring-left, #webring-right {
-    width: 20vw;
-    align-self: center;
-    }
-
-    #webring-middle {
-    flex-grow: 1;
-    align-self: center;
-    }
-    
-    /* unvisited link */
-a:link {
-  color: #767c5c;
-}
-    
-    /* visited link */
-a:visited {
-  color: #767c5c;
-}
-
-/* mouse over link */
-a:hover {
-  color: red;
-}
-
-/* selected link */
-a:active {
-  color: black;
-}
-    
-    
-	</style>
+        video {
+            display: none;
+			width: 100vw;
+			height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div id="webring">
-        <!--<div id="webring-left">
-          <a href="http://lovelovelovelovelovelovelovelovelovelovelovelove-love-love-love.me/">Previous</a>
-        </div>
-         -->
-           <!-- 
-            <div id="webring-middle">
-       This is metaverse-room.tv, a passive POV experience. It is a Single Serving Site based on the <a href="https://en.wikipedia.org/wiki/Poetry">Poetry Wikipedia entry</a> 
-        and is part of the <a href="https://2023.worldwidewebring.club">Social Media</a> Webring.
-        </div> 
-    -->
-        <!--
-            <div id="webring-right">
-          <a href="http://microwa.it/">Next</a>
-        </div>
-        -->
-  
-  
-	<video id="bg-video" autoplay muted>
-		<source src="assets/kjartan-start.mp4">
-		<source src="bg-video.webm" type="video/webm">
-		Your browser does not support the video tag.
-	</video>
-	
-	<div id="video-overlay">
-		<video id="overlay-video" autoplay>
-			<source src="assets/kjartan-watch.mp4">
-			<source src="overlay-video.webm" type="video/webm">
-			Your browser does not support the video tag.
-		</video>
-	</div>
-	
-	<script>
-		var bgVideo = document.getElementById('bg-video');
-		var overlayVideo = document.getElementById('overlay-video');
-		var videoOverlay = document.getElementById('video-overlay');
-		
-		bgVideo.addEventListener('click', function() {
-			videoOverlay.style.display = 'block';
-			overlayVideo.play();
-		});
-		
-		overlayVideo.addEventListener('ended', function() {
-			videoOverlay.style.display = 'none';
-			overlayVideo.currentTime = 0;
-		});
-	</script>
+
+<div id="fullscreen-container">
+    <img id="fullscreen-element" src="assets/kjartan-start.jpg" alt="Fullscreen Image">
+    <video id="fullscreen-video" autoplay muted loop playsinline>
+        <source src="assets/kjartan-watch.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    const imageElement = document.getElementById('fullscreen-element');
+    const videoElement = document.getElementById('fullscreen-video');
+
+    imageElement.addEventListener('click', () => {
+        imageElement.style.display = 'none';
+        videoElement.style.display = 'block';
+        videoElement.play();
+    });
+
+    videoElement.addEventListener('click', () => {
+        videoElement.pause();
+        videoElement.style.display = 'none';
+        imageElement.style.display = 'block';
+    });
+</script>
+
 </body>
 </html>
