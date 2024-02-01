@@ -38,7 +38,7 @@
 
 <div id="fullscreen-container">
     <img id="fullscreen-element" src="assets/kjartan-start.jpg" alt="Fullscreen Image">
-    <video id="fullscreen-video" autoplay loop playsinline>
+    <video id="fullscreen-video" loop playsinline>
         <source src="assets/kjartan-watch.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -47,11 +47,15 @@
 <script>
     const imageElement = document.getElementById('fullscreen-element');
     const videoElement = document.getElementById('fullscreen-video');
+    let videoStarted = false;
 
     imageElement.addEventListener('click', () => {
-        imageElement.style.display = 'none';
-        videoElement.style.display = 'block';
-        videoElement.play();
+        if (!videoStarted) {
+            videoStarted = true;
+            imageElement.style.display = 'none';
+            videoElement.style.display = 'block';
+            videoElement.play();
+        }
     });
 
     videoElement.addEventListener('click', () => {
