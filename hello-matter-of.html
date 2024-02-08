@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flagship</title>
+    <link rel="icon" type="image/x-icon" href="boat-assets/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <style>
+      body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+       
+
+        #centered-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+      /* Desktop */
+      @media only screen and (min-width: 1000px) {
+       
+        #video-container {
+            position: relative;
+            width: 80%;
+            max-width: 58vw;
+            overflow: hidden;
+            box-shadow: 0 0 20px #fff,  0 0 40px #fff, 0 0 40px #fff, 0 0 300px #fff, 0 0 300px #fff, 0 0 300px #fff;
+
+        }
+      
+      }
+      /* Mobile */
+      @media only screen and (max-width: 999px) {
+     
+        #video-container {
+            position: relative;
+            width: 80%;
+            max-width: 90vw;
+            overflow: hidden;
+            box-shadow: 0 0 20px #fff,  0 0 40px #fff, 0 0 40px #fff, 0 0 300px #fff, 0 0 300px #fff, 0 0 300px #fff;
+
+        }
+
+      }
+
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="fixed">
+      <a target="_self" href="index.html" class="top-left">Projects</a>
+      <a target="_self" href="about.html" class="top-right">About</a>
+    </div>
+
+    
+    <div id="video-container">
+      <video id="centered-video" controls>
+          <source src="assets/message_to_matter_of.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div id="animatedBackground"></div>
+
+   
+
+    
+  </body>
+</html>
