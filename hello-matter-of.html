@@ -19,7 +19,18 @@
             background-color: #f0f0f0;
         }
 
-       
+        #loading-text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   max-width: 100vw;
+   transform: translate(-50%, -50%);
+   z-index: -100; /* Place the text above the video */
+   color: black; /* Adjust the text color */
+   text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 40px #fff;  
+   text-align: center;
+
+}
 
         #centered-video {
             width: 100%;
@@ -30,6 +41,11 @@
       /* Desktop */
       @media only screen and (min-width: 1000px) {
        
+        #loading-text {
+          font-size: 4.5vw;
+        }
+
+
         #video-container {
             position: relative;
             width: 80%;
@@ -43,6 +59,10 @@
       /* Mobile */
       @media only screen and (max-width: 999px) {
      
+        #loading-text {
+          font-size: 8.5vw;
+        }
+
         #video-container {
             position: relative;
             width: 80%;
@@ -66,16 +86,41 @@
 
     
     <div id="video-container">
+      <div id="loading-text">Loading Message to Matter Of</div>
       <video id="centered-video" controls>
-          <source src="assets/message_to_matter_of.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+         <source src="assets/message_to_matter_of.mp4" type="video/mp4">
+         Your browser does not support the video tag.
       </video>
-    </div>
+   </div>
 
     <div id="animatedBackground"></div>
 
    
+<script>
 
+// script.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  var loadingText = document.getElementById("loading-text");
+  var dots = 0;
+
+  // Function to add dots to the loading text
+  function addDots() {
+    loadingText.textContent = "Loading Message to Matter Of" + ".".repeat(dots);
+    dots++;
+
+    if (dots > 3) {
+      dots = 0;
+    }
+  }
+
+  // Interval to add dots every 500 milliseconds (adjust the duration as needed)
+  var dotInterval = setInterval(addDots, 500);
+});
+
+  
+</script>
+    
     
   </body>
 </html>
